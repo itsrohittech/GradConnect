@@ -1,0 +1,54 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block title %}
+Home - My Website
+{% endblock %}
+
+{% block content %}
+
+
+
+<!-- admin_view_marital_status.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin View Marital Status</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>{{ data.user.username }}'s Marital Status</h4>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Status:</strong> {{ data.status }}</p>
+
+                        <!-- Only show Spouse Name and Marriage Date if status is 'married' -->
+                        {% if data.status == 'married' %}
+                            <p><strong>Spouse Name:</strong> {{ data.spouse_name }}</p>
+                            <p><strong>Marriage Date:</strong> {{ data.marriage_date }}</p>
+                        {% endif %}
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+{% endblock %}

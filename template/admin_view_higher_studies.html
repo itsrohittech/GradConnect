@@ -1,0 +1,38 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block title %}
+Home - My Website
+{% endblock %}
+
+{% block content %}
+
+
+
+<!-- admin_view_higher_studies.html -->
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h4>{{ data.degree }} at {{ data.institution_name }}</h4>
+                </div>
+                <div class="card-body">
+                    <p><strong>Start Year:</strong> {{ data.start_year }}</p>
+                    <p><strong>End Year:</strong> {{ data.end_year }}</p>
+                    <p><strong>Is Completed:</strong> 
+                        {% if data.is_completed %}
+                            <span class="badge bg-success">Yes</span>
+                        {% else %}
+                            <span class="badge bg-warning">No</span>
+                        {% endif %}
+                    </p>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

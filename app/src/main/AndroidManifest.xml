@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@color/white"
+        android:enableOnBackInvokedCallback="true"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GradConnect"
+        tools:targetApi="tiramisu">
+        <activity
+            android:name=".CreateNotificationRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlumniVerificationRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageNoticesRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageEventsRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoticesRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventsRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RollSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CollegeCreateNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetailsCollegeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatCollegeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerificationPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MessagesAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeCollegeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SurveyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrackingStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AlumniVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlumniRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeStudentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

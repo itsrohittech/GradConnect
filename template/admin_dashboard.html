@@ -1,0 +1,80 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block title %}
+Home - My Website
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<style>
+    body{
+        background: linear-gradient(rgba(255,255,255,0.9),rgba(255, 255, 255, 0.9)), url('img/logo.png') fixed center no-repeat;
+        background-size: contain;
+    }
+    /* Styling for the scrollable section */
+    .scrollable-container {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .scrollable-container::-webkit-scrollbar {
+        height: 4px;
+        background-color: #cbcbcb;
+        border-radius: 5px;
+    }
+    .scrollable-container::-webkit-scrollbar-thumb {
+        background-color: #2F80ED;
+        border-radius: 5px;
+    }
+
+    .card {
+        margin-right: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .card-alumni{
+        flex: 0 0 380px;
+    }
+    .card-links{
+        flex: 0 0 170px;
+    }
+    .icon {
+        font-size: 2.5rem;
+        color: #000000;
+    }
+</style>
+
+
+
+<div class="container mb-5">
+    
+<div class="row">
+    
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">User List</h5>
+                <p class="card-text">View and manage registered users on the platform.</p>
+                <a href="/admin_user_list" class="btn btn-primary">View Users</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Students Request </h5>
+                <p class="card-text">Manage course request list.</p>
+                <a href="/admin_view_request" class="btn btn-primary">View Request</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+{% endblock %}

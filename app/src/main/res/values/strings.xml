@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GradConnect</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="data_analytics">Institutions can analyze alumni data to understand career trends, geographic distribution, and the impact of their education on career success, which can inform curriculum improvements and strategic planning.</string>
+    <string name="Scope">This system aids in strengthening the relationship between the institution and its alumni, enhancing opportunities for mentorship, collaboration, and support.</string>
+    <string name="purpose">The purpose of an Alumni Tracking System is to maintain a database of former students, facilitate networking, and track their career progress.
+Its scope includes managing alumni records, organizing events, and fostering engagement through communication platforms</string>
+    <string name="samplepara">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.       </string>
+</resources>

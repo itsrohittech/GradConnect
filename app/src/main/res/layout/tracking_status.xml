@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrackingStatusActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/transparent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Tracking Status"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Post Graduation Status"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/startupView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/curved_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+    <View
+        android:id="@+id/MaritalView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/curved_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+    <View
+        android:id="@+id/businessView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/curved_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startupView" />
+
+    <View
+        android:id="@+id/higherStudiesView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/curved_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MaritalView" />
+
+    <View
+        android:id="@+id/otherView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/curved_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/businessView" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/startupView"
+        app:layout_constraintStart_toStartOf="@+id/startupView"
+        app:layout_constraintTop_toTopOf="@+id/startupView"
+        app:srcCompat="@drawable/startup" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Startup"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/startupView"
+        app:layout_constraintEnd_toEndOf="@+id/startupView"
+        app:layout_constraintStart_toStartOf="@+id/startupView" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/MaritalView"
+        app:layout_constraintStart_toStartOf="@+id/MaritalView"
+        app:layout_constraintTop_toTopOf="@+id/MaritalView"
+        app:srcCompat="@drawable/marriage" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Marital"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/MaritalView"
+        app:layout_constraintEnd_toEndOf="@+id/MaritalView"
+        app:layout_constraintStart_toStartOf="@+id/MaritalView" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/businessView"
+        app:layout_constraintStart_toStartOf="@+id/businessView"
+        app:layout_constraintTop_toTopOf="@+id/businessView"
+        app:srcCompat="@drawable/business_bag" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Business"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/businessView"
+        app:layout_constraintEnd_toEndOf="@+id/businessView"
+        app:layout_constraintStart_toStartOf="@+id/businessView" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/higherStudiesView"
+        app:layout_constraintStart_toStartOf="@+id/higherStudiesView"
+        app:layout_constraintTop_toTopOf="@+id/higherStudiesView"
+        app:srcCompat="@drawable/higher_studies" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Higher Studies"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/higherStudiesView"
+        app:layout_constraintEnd_toEndOf="@+id/higherStudiesView"
+        app:layout_constraintStart_toStartOf="@+id/higherStudiesView" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/otherView"
+        app:layout_constraintStart_toStartOf="@+id/otherView"
+        app:layout_constraintTop_toTopOf="@+id/otherView"
+        app:srcCompat="@drawable/others" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Other"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/otherView"
+        app:layout_constraintEnd_toEndOf="@+id/otherView"
+        app:layout_constraintStart_toStartOf="@+id/otherView" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

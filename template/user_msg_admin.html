@@ -1,0 +1,245 @@
+{% extends 'user_base.html' %}
+{% load static %}
+{% block title %}
+Home - My Website
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Chat Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap Icons -->
+    <style>
+        body {
+            background: linear-gradient(rgba(255,255,255,0.9),rgba(255, 255, 255, 0.9)), url('img/logo.png') fixed top;
+            background-size: 30%;
+        }
+
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-content {
+            display: flex;
+            height: calc(100% - 50px); /* Adjust height to account for input section */
+        }
+
+        .contact-list {
+            width: 30%;
+            border-right: 1px solid #ddd;
+            padding: 0px 10px 0px 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .contact-item img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .contact-item .contact-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contact-item .last-message {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-bottom: 15px;
+            padding: 0px 10px 0px 15px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('img/logo.png') no-repeat center;
+            background-size: 150%;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .message.sender {
+            background-color: #2F80ED;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .message.receiver {
+            background-color: #D9D9D9;
+            color: #333;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            margin-left: 10px;
+            background-color: rgba(47, 129, 237, 0.2);
+            border-radius: 10px;
+        }
+
+        .chat-header img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .chat-header .contact-name {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #2F80ED;
+        }
+
+        .input-group {
+            position: relative;
+            margin-top: auto;
+        }
+
+        .input-group input {
+            padding-left: 40px;
+            border-radius: 20px !important;
+        }
+
+        .input-group input:focus {
+            background-color: transparent;
+        }
+
+        .attachment-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .send-icon {
+            color: #2F80ED;
+            border: none;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hidden-input {
+            display: none;
+        }
+
+        /* Custom Scrollbar */
+        .contact-list::-webkit-scrollbar,
+        .messages::-webkit-scrollbar {
+            width: 5px;
+            padding-left: 20px;
+        }
+
+        .contact-list::-webkit-scrollbar-thumb,
+        .messages::-webkit-scrollbar-thumb {
+            background-color: #c5c5c5;
+            border-radius: 10px;
+        }
+
+        .contact-list::-webkit-scrollbar-track,
+        .messages::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            border: 1px solid rgba(36, 35, 100, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- user_msg_admin.html -->
+<div class="chat-container mt-5">
+    <form method="POST" class="d-flex flex-column h-100">
+        {% csrf_token %}
+        <div class="chat-content">
+            <!-- Chat Section -->
+            <div class="chat-section" style="flex: 1; display: flex; flex-direction: column;">
+                
+                <!-- For User Type 'User' -->
+                {% if data.user_type == 'user' %}
+                <div class="chat-header text-start" id="chatHeader">
+                    <h5>User Chat</h5>
+                </div>
+                {% endif %}
+
+                <!-- For User Type 'Admin' -->
+                {% if data.user_type == 'admin' %}
+                <div class="chat-header text-white text-end bg-primary" id="chatHeader">
+                    <h5>Admin Chat</h5>
+                </div>
+                {% endif %}
+
+                <!-- Display Messages -->
+                <div class="chat-body">
+                    {% for message in data %}
+                    <div class="message my-0 {% if message.user.user_type == 'admin' %}text-end{% else %}text-start{% endif %}">
+                        <p class="message-text bg-light p-1 rounded">{{ message.msg }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-group mt-3">
+            <input type="text" class="form-control" id="messageInput" placeholder="Type a message..." name="message" required>
+            <i class="bi bi-paperclip attachment-icon" id="attachmentIcon"></i>
+            <button type="submit" class="btn send-icon" id="sendButton"><i class="bi bi-send-fill"></i></button>
+        </div>
+    </form>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+{% endblock %}

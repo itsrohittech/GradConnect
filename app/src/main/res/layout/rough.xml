@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".DataHolderTestActivity"
+    android:layout_height="match_parent">
+
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/curved_grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintTop_toTopOf="@+id/view4"
+            app:srcCompat="@drawable/register" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Register Alumni"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/curved_grey"
+            app:layout_constraintStart_toEndOf="@+id/view4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintStart_toStartOf="@+id/view5"
+            app:layout_constraintTop_toTopOf="@+id/view5"
+            app:srcCompat="@drawable/verification" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Verification Status"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/view5"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintStart_toStartOf="@+id/view5" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/curved_grey"
+            app:layout_constraintStart_toEndOf="@+id/view5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintStart_toStartOf="@+id/view6"
+            app:layout_constraintTop_toTopOf="@+id/view6"
+            app:srcCompat="@drawable/baseline_chat_24" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Chat"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view6"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintStart_toStartOf="@+id/view6" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/curved_grey"
+            app:layout_constraintStart_toEndOf="@+id/view6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="@+id/view7"
+            app:layout_constraintStart_toStartOf="@+id/view7"
+            app:layout_constraintTop_toTopOf="@+id/view7"
+            app:srcCompat="@drawable/survey" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Status"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintEnd_toEndOf="@+id/view7"
+            app:layout_constraintStart_toStartOf="@+id/view7" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
